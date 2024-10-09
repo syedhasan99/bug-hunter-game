@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9b965;
+    z-index: -9;
+    position: fixed;
+}
+.container {
+    width: 300px;
+    height: 450px;
+    background-color: #ffb120;
+    border-radius: 5px;
+    position: relative;
+    z-index: -2;
+    box-shadow: rgba(255, 255, 255, 0.178) 0px 48px 100px 0px;
+}
+.container .bg-img {
+    position: absolute;
+    top: 84px;
+    left: -70px;
+    width: 440px;
+    z-index: -1;
+    transform: rotate(90deg);
+}
+
+/* header setting */
+.header {
+    width: 300px;
+    position: fixed;
+    padding: 5px;
+    background-color: #ffb120;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+.header .inner-header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px dashed #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+}
+
+.inner-header #score {
+    background: #bb5913;
+    padding: 0 30px;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 2px 1.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.inner-header .lives {
+    color: #dd0000;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.lives i {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding: 2px 2px 1px 2px;
+}
+
+.main {
+    height: 100%;
+    color: #fff;
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.8;
+    position: relative;
+    overflow: hidden;
+}
+.main #best {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    font-size: 16px;
+}
+#pause-btn, #play-btn {
+    position: absolute;
+    right: 20px;
+    top: 50px;
+    cursor: pointer;
+}
+
+.ant {
+    width: 60px;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    /* left: 240px; */
+    transform: rotate(180deg) scale(1);
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+}
+.ant.catched {
+    transform: rotate(180deg) scale(0);
+    transition: all 0.3s ease-out;
+}
+
+button#start-game {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px 15px;
+    font-size: 23px;
+    border: none;
+    outline: transparent;
+    background: #bb5913;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: inset 2px 1.5px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 99;
+}
+#start-game:active {
+    background: #b0500b;
+}
